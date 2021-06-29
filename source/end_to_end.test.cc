@@ -102,7 +102,7 @@ void Test(std::string expected_result_file, int seed = 10, int data_int = 100, d
           string expected_chunk = string(expected_buffer);
 
 
-          REQUIRE(actual_chunk == expected_chunk);
+          CHECK(actual_chunk == expected_chunk);
 
         }
 
