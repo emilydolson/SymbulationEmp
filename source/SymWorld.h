@@ -246,7 +246,7 @@ public:
           if (IsOccupied(i)) {
 	    emp::vector<Symbiont>& syms = pop[i]->GetSymbionts(); 
 	    int sym_size = syms.size();
-	    for(size_t j=0; j< sym_size; j++){
+	    for(int j=0; j< sym_size; j++){
 	      data_node_symintval->AddDatum(syms[j].GetIntVal());
 	    }//close for
 	  }//close if
@@ -322,7 +322,7 @@ public:
               syms[j].IncBurstTimer(random);
               //std::cout << "Should have incremented " << syms[j].GetBurstTimer() << std::endl;
               int offspring_per_tick = burst_size/burst_time;
-              for(size_t o=0; o< offspring_per_tick; o++) {
+              for(int o=0; o< offspring_per_tick; o++) {
                 if(syms[j].GetPoints() >= sym_lysis_res) { //check if sym has resources to produce offspring
                   //if so, make a new symbiont and add it to Repro sym list
                   Symbiont *sym_baby = new Symbiont(syms[j].GetIntVal());

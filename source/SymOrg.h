@@ -96,7 +96,7 @@ public:
 
 
   void AddSymbionts(Symbiont _in, int sym_limit) {
-    if(syms.size() < sym_limit){
+    if((int)syms.size() < sym_limit){
       syms.push_back(_in);
     }
   }  
